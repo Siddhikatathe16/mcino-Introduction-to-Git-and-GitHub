@@ -13,15 +13,17 @@
 # r, annual rate of interest
 
 # Output:
-# simple interest = p*t*r/100
+# simple interest = (p*t*r)/100
 
 echo "Enter the principal:"
-read p
-echo "Enter rate of interest per year:"
-read r
-echo "Enter time period in years:"
-read t
+read -r p
 
-s=$(expr $p \* $t \* $r / 100)
+echo "Enter rate of interest per year:"
+read -r r
+
+echo "Enter time period in years:"
+read -r t
+
+s=$(expr "$p" \* "$t" \* "$r" / 100)
 echo "The simple interest is:"
-echo $s
+echo "$s"
